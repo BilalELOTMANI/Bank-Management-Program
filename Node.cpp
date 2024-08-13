@@ -14,3 +14,6 @@ Node::Node(int d)//Parameterized Constructor
 	pre = nullptr;
 	data = d;
 }
+
+
+// To delete because i will switch to array based hashtable

@@ -1,4 +1,7 @@
 
+// To delete because i will switch to array based hashtable
+
+
 # include "BST_Tree.h"
 # include "Hashtable.h"
 BST_Tree:: BST_Tree() {
