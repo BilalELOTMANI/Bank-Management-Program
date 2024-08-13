@@ -3,7 +3,7 @@ using namespace std;
 # include "Hashtable.h"
 # include <vector>
 
-Hashtable:: Hashtable()
+Hashtable:: Hashtable() // to redo
 {
 	start = nullptr;
 }
@@ -28,7 +28,7 @@ void Hashtable:: starthash()
 	}
 	loadhashtable();
 }
-void Hashtable::add(int a, int p)
+void Hashtable::add(int a, int p) // to redo
 {
 	static int i = 0;
 	ofstream write;
@@ -47,7 +47,7 @@ void Hashtable::add(int a, int p)
 
 	starthash();
 }
-bool Hashtable::match(int a, int p)
+bool Hashtable::match(int a, int p) // to redo
 {
 	bool flag = false;
 	int r = a % 10;
