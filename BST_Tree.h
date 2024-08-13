@@ -23,3 +23,5 @@ public:
 	BST_Node* search(BST_Node*,int);
 	void printoinfo(BST_Node*);
 };
+
+// To delete because i will switch to array based hashtable

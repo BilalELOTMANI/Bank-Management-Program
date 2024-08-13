@@ -57,3 +57,5 @@ void staff()
 	}
 
 }
+
+// To delete because i will switch to array based hashtable

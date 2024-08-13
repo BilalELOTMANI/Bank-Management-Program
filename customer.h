@@ -39,3 +39,5 @@ void customer()
 	}
 
 }
+
+// To delete because i will switch to array based hashtable

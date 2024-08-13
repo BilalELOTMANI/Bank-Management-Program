@@ -19,3 +19,5 @@ public:
 	BST_Node(string, string, int, int, int);
 	
 };
+
+// To delete because i will switch to array based hashtable
