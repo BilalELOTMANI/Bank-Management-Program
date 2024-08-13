@@ -20,3 +20,4 @@ This is a comprehensive bank management system implemented in C++. The system su
 - **Staff**: 
   - Staff-specific operations (to be implemented)
 
+The project actually uses a linked list based hashtable, which represents a problem average time operations wise - An array based hashtable struture is in developement for this project !!
