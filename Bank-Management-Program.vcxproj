@@ -144,11 +144,6 @@
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Node_1.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="hashtable.txt" />
-    <Text Include="server.txt" />
-    <Text Include="transaction.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

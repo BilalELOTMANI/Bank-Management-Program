@@ -60,15 +60,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="hashtable.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="server.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="transaction.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-  </ItemGroup>
 </Project>
