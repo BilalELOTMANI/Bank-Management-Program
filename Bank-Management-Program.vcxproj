@@ -132,8 +132,6 @@
     <ClInclude Include="BST_Tree.h" />
     <ClInclude Include="customer.h" />
     <ClInclude Include="Hashtable.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="Node_1.h" />
     <ClInclude Include="staff.h" />
   </ItemGroup>
   <ItemGroup>
@@ -141,8 +139,6 @@
     <ClCompile Include="BST_Tree.cpp" />
     <ClCompile Include="Hashtable.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Node.cpp" />
-    <ClCompile Include="Node_1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

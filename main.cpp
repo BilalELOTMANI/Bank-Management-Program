@@ -10,7 +10,7 @@ void boot()
 {
 	Hashtable H;
 	BST_Tree T;
-	H.starthash();
+	H.loadhashtable();
 	T.load_Server();
 }
 int main()

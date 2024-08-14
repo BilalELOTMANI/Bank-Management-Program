@@ -1,19 +1,25 @@
-#pragma once
-# include "Node.h"
-# include "Node_1.h"
+#ifndef HASHTABLE_H  // Start of include guard
+#define HASHTABLE_H
 
-class Hashtable
-{
+#include <iostream>
+#include <vector>
+#include <list>  // For the linked list
+#include <utility>  // For std::pair
+#include <fstream>
+
+class Hashtable {
+private:
+    std::vector<std::list<std::pair<int, int>>> table;
+    int size;
+
 public:
-	Node * start;
-	Hashtable();
-	void starthash();
-	void loadhashtable();
-	void add(int,int);
-	bool match(int,int);
-	void display();
-	void displayPasswords();
-	void delete_password(int);
+    Hashtable();
+    void add(int a, int p);
+    bool match(int a, int p);
+    void display();
+    void displayPasswords();
+    void delete_password(int accountno);
+    void loadhashtable();
 };
 
-// To delete because i will switch to array based hashtable
+#endif // HASHTABLE_H  // End of include guard

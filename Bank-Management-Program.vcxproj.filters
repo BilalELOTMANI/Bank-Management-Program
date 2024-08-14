@@ -30,12 +30,6 @@
     <ClInclude Include="Hashtable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Node_1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="staff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -51,12 +45,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Node_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
