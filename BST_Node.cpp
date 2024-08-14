@@ -1,26 +1,23 @@
+#include "BST_Node.h"
 
-# include "BST_Node.h"
-
-BST_Node:: BST_Node()
-{
-	left = nullptr;
-	right = nullptr;
-	name = "";
-    adress = "";
+// Default Constructor
+BST_Node::BST_Node() {
+    left = nullptr;
+    right = nullptr;
+    name = "";
+    address = "";
     account_number = 0;
     password = 0;
     balance = 0;
 }
-BST_Node:: BST_Node(string name, string adress, int accountno, int password, int balance)
-{
-	left = nullptr;
-	right = nullptr;
-	this->name = name;
-	this->account_number = accountno;
-	this->adress = adress;
-	this->balance = balance;
-	this->password = password;
+
+// Parameterized Constructor
+BST_Node::BST_Node(std::string name, std::string address, int accountno, int password, int balance) {
+    left = nullptr;
+    right = nullptr;
+    this->name = name;
+    this->address = address;
+    this->account_number = accountno;
+    this->password = password;
+    this->balance = balance;
 }
-
-
-// To delete because i will switch to array based hashtable
