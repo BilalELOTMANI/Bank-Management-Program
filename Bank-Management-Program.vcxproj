@@ -138,8 +138,10 @@
     <ClCompile Include="admin.cpp" />
     <ClCompile Include="BST_Node.cpp" />
     <ClCompile Include="BST_Tree.cpp" />
+    <ClCompile Include="customer.cpp" />
     <ClCompile Include="Hashtable.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="staff.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
