@@ -135,6 +135,7 @@
     <ClInclude Include="staff.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="admin.cpp" />
     <ClCompile Include="BST_Node.cpp" />
     <ClCompile Include="BST_Tree.cpp" />
     <ClCompile Include="Hashtable.cpp" />
