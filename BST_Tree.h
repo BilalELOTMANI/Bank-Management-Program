@@ -14,11 +14,11 @@ public:
 
 	BST_Node *Root;
 
-	void add_Account(string, string, long, int, int);
+	void add_Account(string, string, int, int, int);
 
 	int findMax(BST_Node*);
 
-	BST_Node* delete_Account(BST_Node *, long);
+	BST_Node* delete_Account(BST_Node *, int);
 
 	void load_Server();
 
@@ -26,9 +26,9 @@ public:
 
 	void update_server(BST_Node*);
 
-	void withdraw(long,int);
+	void withdraw(int,int);
 
-	void deposit(long,int);
+	void deposit(int,int);
 
 	void editaccount_byAdmin();
 
@@ -36,7 +36,7 @@ public:
 
 	void transaction_history();
 	
-	BST_Node* search(BST_Node*,long);
+	BST_Node* search(BST_Node*,int);
 
 	void printoinfo(BST_Node*);
 };

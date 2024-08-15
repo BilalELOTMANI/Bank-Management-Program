@@ -12,7 +12,7 @@ BST_Node::BST_Node() {
 }
 
 // Parameterized Constructor
-BST_Node::BST_Node(std::string name, std::string address, long accountno, int password, int balance) {
+BST_Node::BST_Node(std::string name, std::string address, int accountno, int password, int balance) {
     left = nullptr;
     right = nullptr;
     this->name = name;

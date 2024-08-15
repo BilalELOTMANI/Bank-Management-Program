@@ -33,10 +33,10 @@ void handleAddAccount(BST_Tree& t, Hashtable& h) {
     cin >> balanceStr;
 
     t.add_Account(name, address, stol(accNumberStr), stoi(passwordStr), stoi(balanceStr));
-    h.add(stol(accNumberStr), stoi(passwordStr));
+    //h.add(stol(accNumberStr), stoi(passwordStr));
 
     cout << "Account added successfully !";
-    system("clear");
+    system("cls");
     displayMenu();
 }
 

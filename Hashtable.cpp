@@ -4,7 +4,7 @@
 using namespace std;
 
 Hashtable::Hashtable() {
-	size = 12;  // Set the size of the hash table 
+	size = 10;  // Set the size of the hash table 
 	table.resize(size);
 }
 
@@ -61,7 +61,7 @@ void Hashtable::displayPasswords() {
 	}
 }
 
-void Hashtable::delete_password(long accountno) {
+void Hashtable::delete_password(int accountno) {
 	vector<pair<int, int>> temp_entries;
 
 	ifstream read;
