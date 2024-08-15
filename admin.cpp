@@ -25,19 +25,18 @@ void handleAddAccount(BST_Tree& t, Hashtable& h) {
     cin >> name;
     cout << "Enter address: ";
     cin >> address;
-    cout << "Enter account number: ";
+    cout << "Enter account number (10 digits): ";
     cin >> accNumberStr;
-    cout << "Enter password: ";
+    cout << "Enter password (4 digits) : ";
     cin >> passwordStr;
     cout << "Enter balance: ";
     cin >> balanceStr;
 
-    t.add_Account(name, address, stol(accNumberStr), stoi(passwordStr), stoi(balanceStr));
+    t.add_Account(name, address, stoi(accNumberStr), stoi(passwordStr), stoi(balanceStr));
     //h.add(stol(accNumberStr), stoi(passwordStr));
 
     system("cls");
     cout << "Account added successfully !" << endl;
-    displayMenu();
 }
 
 // Function to handle deleting an account
