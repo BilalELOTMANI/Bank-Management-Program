@@ -18,4 +18,4 @@ void handleWithdraw(BST_Tree& t);
 void handleDeposit(BST_Tree& t);
 
 // Function to start the staff operations
-void staff();
+void staff(BST_Tree& t);

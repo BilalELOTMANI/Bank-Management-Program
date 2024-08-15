@@ -30,10 +30,10 @@ int main() {
 
         switch (condition) {
         case 1:
-            admin();
+            admin(T, H);
             break;
         case 2:
-            staff(); // Assuming you will implement the staff function
+            staff(T); 
             break;
         case 3:
             customer();

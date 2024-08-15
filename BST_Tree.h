@@ -38,6 +38,6 @@ public:
 	
 	BST_Node* search(BST_Node*, long long);
 
-	void printoinfo(BST_Node*);
+	void printoinfo(const BST_Node*) const;
 };
 

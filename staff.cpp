@@ -77,8 +77,7 @@ void handleDeposit(BST_Tree& t) {
 }
 
 // Function to start the staff operations
-void staff() {
-    BST_Tree t;
+void staff(BST_Tree& t) {
     int condition = 0;
 
     while (condition != 5) {

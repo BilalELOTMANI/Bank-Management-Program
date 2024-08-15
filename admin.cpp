@@ -92,9 +92,7 @@ void handlePrintAllAccounts(BST_Tree& t) {
 }
 
 // Function to start the admin operations
-void admin() {
-    BST_Tree t;
-    Hashtable h;
+void admin(BST_Tree& t, Hashtable& h) {
     int condition = 0;
 
     while (condition != 6) {

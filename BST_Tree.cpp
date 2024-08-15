@@ -195,6 +195,7 @@ void BST_Tree::editaccount_byAdmin()
 void BST_Tree::transfer(long long sender_accountno, long long receiver_accountno, long long sender_amount)
 {
 	// Step 1: Update balances in the tree
+	update_server(Root);
 	BST_Node* sender = search(Root, sender_accountno);
 	if (!sender) {
 		cout << "Sender account not found." << endl;
@@ -287,7 +288,12 @@ void BST_Tree::load_Server() {
 	long long accountno, balance;
 	int password;
 
-	while (getline(read, name) && getline(read, address) && read >> accountno >> password >> balance) {
+	while (read >> name && 
+		read >> address && 
+		read >> accountno &&
+		read >> password &&
+		read >> balance
+		) {
 		if (!name.empty() && !address.empty() && accountno != 0 && password != 0) {
 			BST_Node* temp = new BST_Node(name, address, accountno, password, balance);
 			insertIntoBST(Root, temp);
@@ -355,7 +361,7 @@ BST_Node* BST_Tree:: search (BST_Node* root, long long accountno)
 
 }
 
-void BST_Tree:: printoinfo(BST_Node* root)
+void BST_Tree:: printoinfo(const BST_Node* root) const
 {
 
 	if (root)
