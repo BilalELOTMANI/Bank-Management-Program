@@ -38,7 +38,7 @@ void Hashtable::display() {
 }
 
 void Hashtable::loadhashtable() {
-	int acc = 0, pass;
+	int acc, pass;
 
 	ifstream read;
 	read.open("hashtable.txt");
