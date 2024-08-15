@@ -4,7 +4,7 @@
 # include <stdio.h>
 class BST_Tree
 {
-	vector <int> v;
+	vector <long long> v;
 	
 public:
 
@@ -14,11 +14,11 @@ public:
 
 	BST_Node *Root;
 
-	void add_Account(string, string, int, int, int);
+	void add_Account(string, string, long long, int, long long);
 
-	int findMax(BST_Node*);
+	long long findMax(BST_Node*);
 
-	BST_Node* delete_Account(BST_Node *, int);
+	BST_Node* delete_Account(BST_Node *, long long);
 
 	void load_Server();
 
@@ -26,17 +26,17 @@ public:
 
 	void update_server(BST_Node*);
 
-	void withdraw(int,int);
+	void withdraw(long long, long long);
 
-	void deposit(int,int);
+	void deposit(long long, long long);
 
 	void editaccount_byAdmin();
 
-	void transfer(int,int,int);
+	void transfer(long long, long long, long long);
 
 	void transaction_history();
 	
-	BST_Node* search(BST_Node*,int);
+	BST_Node* search(BST_Node*, long long);
 
 	void printoinfo(BST_Node*);
 };

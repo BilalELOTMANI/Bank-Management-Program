@@ -16,7 +16,7 @@ void displayStaffMenu() {
 
 // Function to handle viewing transaction history
 void handleViewTransactionHistory(BST_Tree& t) {
-    int accountno;
+    long long accountno;
     cout << "Please enter account number: ";
     cin >> accountno;
 
@@ -26,7 +26,7 @@ void handleViewTransactionHistory(BST_Tree& t) {
         return;
     }
 
-    int line;
+    long long line;
     cout << "Transaction History for Account " << accountno << ":" << endl;
     while (read >> line) {
         if (line == accountno) {
@@ -40,7 +40,7 @@ void handleViewTransactionHistory(BST_Tree& t) {
 
 // Function to handle transferring money
 void handleTransfer(BST_Tree& t) {
-    int senderAccountNo, receiverAccountNo, amount;
+    long long senderAccountNo, receiverAccountNo, amount;
 
     cout << "Please enter sender account number: ";
     cin >> senderAccountNo;
@@ -54,7 +54,7 @@ void handleTransfer(BST_Tree& t) {
 
 // Function to handle withdrawing money
 void handleWithdraw(BST_Tree& t) {
-    int accountNo, amount;
+    long long accountNo, amount;
 
     cout << "Please enter account number: ";
     cin >> accountNo;
@@ -66,7 +66,7 @@ void handleWithdraw(BST_Tree& t) {
 
 // Function to handle depositing money
 void handleDeposit(BST_Tree& t) {
-    int accountNo, amount;
+    long long accountNo, amount;
 
     cout << "Please enter account number: ";
     cin >> accountNo;

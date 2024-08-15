@@ -14,7 +14,7 @@ void displayCustomerMenu() {
 
 // Function to handle viewing account details
 void handleViewAccountDetails(BST_Tree& t) {
-    int accountno;
+    long long accountno;
     cout << "Please enter account number: ";
     cin >> accountno;
 
@@ -37,7 +37,7 @@ void handleViewAccountDetails(BST_Tree& t) {
 
 // Function to handle viewing transaction history
 void handleViewTransactionHistory() {
-    int accountno;
+    long long accountno;
     cout << "Please enter account number: ";
     cin >> accountno;
 
@@ -47,7 +47,7 @@ void handleViewTransactionHistory() {
         return;
     }
 
-    int line;
+    long long line;
     cout << "Transaction History for Account " << accountno << ":" << endl;
     while (read >> line) {
         if (line == accountno) {

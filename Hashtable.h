@@ -14,11 +14,11 @@ private:
 
 public:
     Hashtable();
-    void add(int a, int p);
-    bool match(int a, int p);
+    void add(long long a, int p);
+    bool match(long long a, int p);
     void display();
     void displayPasswords();
-    void delete_password(int accountno);
+    void delete_password(long long accountno);
     void loadhashtable();
 };
 

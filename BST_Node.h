@@ -11,12 +11,12 @@ public:
 	BST_Node * right;
 	string name;
 	string address;
-	int account_number;
+	long long account_number;
 	int password;
-	int balance;
+	long long balance;
 
 	BST_Node();
-	BST_Node(string, string, int, int, int);
+	BST_Node(string, string, long long, int, long long);
 	
 };
 

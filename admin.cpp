@@ -46,9 +46,9 @@ void handleAddAccount(BST_Tree& t, Hashtable& h) {
         cin >> balanceStr;
 
         // Attempt to convert strings to numbers
-        int accNumber = stoi(accNumberStr);
+        long long accNumber = stoll(accNumberStr);
         int password = stoi(passwordStr);
-        int balance = stoi(balanceStr);
+        long long balance = stoll(balanceStr);
 
         // Add the account to the BST
         t.add_Account(name, address, accNumber, password, balance);
@@ -71,7 +71,7 @@ void handleAddAccount(BST_Tree& t, Hashtable& h) {
 
 // Function to handle deleting an account
 void handleDeleteAccount(BST_Tree& t, Hashtable& h) {
-    int accNumber;
+    long long accNumber;
 
     cout << "Enter account number: ";
     cin >> accNumber;

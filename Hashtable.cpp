@@ -8,7 +8,7 @@ Hashtable::Hashtable() {
 	table.resize(size);
 }
 
-void Hashtable::add(int a, int p) {
+void Hashtable::add(long long a, int p) {
 	ofstream write;
 	write.open("hashtable.txt", ios::app);
 	write << a << endl << p << endl;
@@ -17,7 +17,7 @@ void Hashtable::add(int a, int p) {
 	loadhashtable();
 }
 
-bool Hashtable::match(int a, int p) {
+bool Hashtable::match(long long a, int p) {
 	int r = a % size;
 	for (const auto& entry : table[r]) {
 		if (entry.first == a && entry.second == p) {
@@ -38,7 +38,8 @@ void Hashtable::display() {
 }
 
 void Hashtable::loadhashtable() {
-	int acc, pass;
+	long long acc;
+	int pass;
 
 	ifstream read;
 	read.open("hashtable.txt");
@@ -61,12 +62,13 @@ void Hashtable::displayPasswords() {
 	}
 }
 
-void Hashtable::delete_password(int accountno) {
-	vector<pair<int, int>> temp_entries;
+void Hashtable::delete_password(long long accountno) {
+	vector<pair<long long, long long>> temp_entries;
 
 	ifstream read;
 	read.open("hashtable.txt");
-	int acc, pass;
+	long long acc;
+	int pass;
 	while (read >> acc >> pass) {
 		if (acc != accountno) {
 			temp_entries.emplace_back(acc, pass);
