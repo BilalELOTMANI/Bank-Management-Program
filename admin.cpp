@@ -16,28 +16,58 @@ void displayMenu() {
 }
 
 // Function to handle adding an account
+#include <iostream>
+#include <string>
+#include <stdexcept> // For exception handling
+
 void handleAddAccount(BST_Tree& t, Hashtable& h) {
     string name, address;
-    // int accNumber, password, balance;
     string accNumberStr, passwordStr, balanceStr;
 
     cout << "Enter name: ";
     cin >> name;
     cout << "Enter address: ";
     cin >> address;
-    cout << "Enter account number (10 digits): ";
-    cin >> accNumberStr;
-    cout << "Enter password (4 digits) : ";
-    cin >> passwordStr;
-    cout << "Enter balance: ";
-    cin >> balanceStr;
 
-    t.add_Account(name, address, stoi(accNumberStr), stoi(passwordStr), stoi(balanceStr));
-    //h.add(stol(accNumberStr), stoi(passwordStr));
+    try {
+        cout << "Enter account number (10 digits): ";
+        cin >> accNumberStr;
+        if (accNumberStr.length() != 10) {
+            throw out_of_range("Account number must be exactly 10 digits.");
+        }
 
-    system("cls");
-    cout << "Account added successfully !" << endl;
+        cout << "Enter password (4 digits): ";
+        cin >> passwordStr;
+        if (passwordStr.length() != 4) {
+            throw out_of_range("Password must be exactly 4 digits.");
+        }
+
+        cout << "Enter balance: ";
+        cin >> balanceStr;
+
+        // Attempt to convert strings to numbers
+        int accNumber = stoi(accNumberStr);
+        int password = stoi(passwordStr);
+        int balance = stoi(balanceStr);
+
+        // Add the account to the BST
+        t.add_Account(name, address, accNumber, password, balance);
+
+
+        system("cls"); // Use "cls" for clearing console on Windows
+        cout << "Account added successfully!" << endl;
+    }
+    catch (const invalid_argument& e) {
+        cerr << "Error: Invalid input. Please enter numeric values only." << endl;
+    }
+    catch (const out_of_range& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
+    catch (const exception& e) {
+        cerr << "An unexpected error occurred: " << e.what() << endl;
+    }
 }
+
 
 // Function to handle deleting an account
 void handleDeleteAccount(BST_Tree& t, Hashtable& h) {
@@ -89,6 +119,7 @@ void admin() {
             break;
         case 6:
             cout << "Exiting..." << endl;
+            system("cls");
             break;
         default:
             cout << "Please enter a valid option!" << endl;
