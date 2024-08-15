@@ -10,7 +10,7 @@ public:
 	BST_Node * left;
 	BST_Node * right;
 	string name;
-	string adress;
+	string address;
 	int account_number;
 	int password;
 	int balance;

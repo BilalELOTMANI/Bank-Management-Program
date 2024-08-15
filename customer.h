@@ -22,7 +22,7 @@ void customer()
 			BST_Node* temp = t.search(t.Root, accountno);
 			cout << "Account Details Are :\t\t\t\t\t\t " << endl << endl;
 			cout << "NAME :" << temp->name << endl;
-			cout << "ADRESS :" << temp->adress << endl;
+			cout << "address :" << temp->address << endl;
 			cout << "ACCOUNT NUMBER :" << temp->account_number << endl;
 			cout << "PASSWORD :" << temp->password << endl;
 			cout << "BALANCE :" << temp->balance << endl;

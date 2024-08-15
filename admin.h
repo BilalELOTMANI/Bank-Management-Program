@@ -23,7 +23,7 @@ void admin()
 			int acc, p, b;
 			cout << "enter name" << endl;
 			cin >> n;
-			cout << "enter adress" << endl;
+			cout << "enter address" << endl;
 			cin >> a;
 			cout << "enter account number" << endl;
 			cin >> acc;
