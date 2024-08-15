@@ -6,7 +6,7 @@ BST_Tree:: BST_Tree() {
 
 }
 
-void BST_Tree::add_Account(string name, string address, int accountno, int password, int balance)
+void BST_Tree::add_Account(string name, string address, long accountno, int password, int balance)
 {
 	h.add(accountno, password);
 	ofstream write;
@@ -48,7 +48,7 @@ void BST_Tree::add_Account(string name, string address, int accountno, int passw
 	}
 }
 
-BST_Node* BST_Tree::delete_Account(BST_Node * root, int accountno)
+BST_Node* BST_Tree::delete_Account(BST_Node * root, long accountno)
 {
 	
 	if (root == nullptr)
@@ -78,7 +78,7 @@ BST_Node* BST_Tree::delete_Account(BST_Node * root, int accountno)
 	return(root);
 }
 
-void BST_Tree::withdraw(int accountno, int amount)
+void BST_Tree::withdraw(long accountno, int amount)
 {
 	// Load the BST from the server file
 	load_Server();
@@ -133,7 +133,7 @@ void BST_Tree::withdraw(int accountno, int amount)
 	update_server(Root);
 }
 
-void BST_Tree::deposit(int accountno, int amount) {
+void BST_Tree::deposit(long accountno, int amount) {
 	// Load the BST from the server file
 	load_Server();
 
@@ -284,7 +284,7 @@ void BST_Tree::load_Server() {
 	ifstream read("server.txt");
 
 	string name, address;
-	int accountno, password, balance;
+	long accountno, password, balance;
 
 	while (getline(read, name) && getline(read, address) && read >> accountno >> password >> balance) {
 		if (!name.empty() && !address.empty() && accountno != 0 && password != 0) {
@@ -342,7 +342,7 @@ void BST_Tree::update_server(BST_Node* root)
 	write.close();  // Close file after writing
 }
 
-BST_Node* BST_Tree:: search (BST_Node* root, int accountno)
+BST_Node* BST_Tree:: search (BST_Node* root, long accountno)
 {
 	if (root == nullptr)
 		return (nullptr);

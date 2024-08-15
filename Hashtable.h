@@ -18,7 +18,7 @@ public:
     bool match(int a, int p);
     void display();
     void displayPasswords();
-    void delete_password(int accountno);
+    void delete_password(long accountno);
     void loadhashtable();
 };
 

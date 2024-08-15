@@ -61,7 +61,7 @@ void Hashtable::displayPasswords() {
 	}
 }
 
-void Hashtable::delete_password(int accountno) {
+void Hashtable::delete_password(long accountno) {
 	vector<pair<int, int>> temp_entries;
 
 	ifstream read;

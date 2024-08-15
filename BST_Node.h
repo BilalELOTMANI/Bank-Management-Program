@@ -11,7 +11,7 @@ public:
 	BST_Node * right;
 	string name;
 	string address;
-	int account_number;
+	long account_number;
 	int password;
 	int balance;
 
