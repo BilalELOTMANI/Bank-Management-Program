@@ -16,7 +16,7 @@ public:
 	int balance;
 
 	BST_Node();
-	BST_Node(string, string, int, int, int);
+	BST_Node(string, string, long, int, int);
 	
 };
 

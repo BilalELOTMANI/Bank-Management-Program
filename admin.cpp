@@ -1,5 +1,6 @@
 #include "admin.h"
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 // Function to display the admin menu
@@ -31,8 +32,12 @@ void handleAddAccount(BST_Tree& t, Hashtable& h) {
     cout << "Enter balance: ";
     cin >> balanceStr;
 
-    t.add_Account(name, address, stoi(accNumberStr), stoi(passwordStr), stoi(balanceStr));
-    h.add(stoi(accNumberStr), stoi(passwordStr));
+    t.add_Account(name, address, stol(accNumberStr), stoi(passwordStr), stoi(balanceStr));
+    h.add(stol(accNumberStr), stoi(passwordStr));
+
+    cout << "Account added successfully !";
+    system("clear");
+    displayMenu();
 }
 
 // Function to handle deleting an account

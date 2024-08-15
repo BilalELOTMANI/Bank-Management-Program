@@ -284,7 +284,8 @@ void BST_Tree::load_Server() {
 	ifstream read("server.txt");
 
 	string name, address;
-	long accountno, password, balance;
+	long accountno;
+	int password, balance;
 
 	while (getline(read, name) && getline(read, address) && read >> accountno >> password >> balance) {
 		if (!name.empty() && !address.empty() && accountno != 0 && password != 0) {
