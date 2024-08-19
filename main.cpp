@@ -20,7 +20,7 @@ int main() {
     boot(H, T);
 
     int condition = 0;
-    while (condition != 4) {
+    while (true) {
         cout << "You want to login as:" << endl;
         cout << "1. ADMIN" << endl;
         cout << "2. STAFF" << endl;
@@ -42,6 +42,7 @@ int main() {
             cout << "Exiting..." << endl;
             break;
         default:
+            system("cls");
             cout << "Please enter a valid option!" << endl;
             break;
         }

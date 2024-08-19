@@ -61,7 +61,7 @@ BST_Node* BST_Tree::delete_Account(BST_Node * root, long long accountno)
 	{
 		if (root->left && root->right)
 		{
-			int maxValue = findMax(root->left);
+			long long maxValue = findMax(root->left);
 			root->account_number = v.back();
 			root->left = delete_Account(root->left, root->account_number);
 		}
@@ -187,9 +187,78 @@ void BST_Tree::deposit(long long accountno, long long amount) {
 	update_server(Root);
 }
 
-void BST_Tree::editaccount_byAdmin()
-{
+void BST_Tree::editaccount_byAdmin() {
+	long long accountno;
+	cout << "Enter the account number of the account you want to edit: ";
+	cin >> accountno;
 
+	// Search for the account in the BST
+	BST_Node* accountNode = search(Root, accountno);
+	if (accountNode == nullptr) {
+		cout << "Account not found." << endl;
+		return;
+	}
+
+	int choice = 0;
+	while (choice != 6) {
+		cout << "What would you like to edit?" << endl;
+		cout << "1. Name" << endl;
+		cout << "2. Address" << endl;
+		cout << "3. Password" << endl;
+		cout << "4. Balance" << endl;
+		cout << "5. Exit" << endl;
+		cin >> choice;
+
+		switch (choice) {
+		case 1: {
+			string newName;
+			cout << "Enter the new name: ";
+			cin.ignore();
+			getline(cin, newName);
+			accountNode->name = newName;
+			cout << "Name updated successfully." << endl;
+			break;
+		}
+		case 2: {
+			string newAddress;
+			cout << "Enter the new address: ";
+			cin.ignore();
+			getline(cin, newAddress);
+			accountNode->address = newAddress;
+			cout << "Address updated successfully." << endl;
+			break;
+		}
+		case 3: {
+			long long newPassword;
+			cout << "Enter the new password (4 digits): ";
+			cin >> newPassword;
+			if (newPassword.length() != 4) {
+				cout << "Password must be 4 digits." << endl;
+			}
+			else {
+				accountNode->password = newPassword;
+				cout << "Password updated successfully." << endl;
+			}
+			break;
+		}
+		case 4: {
+			long long newBalance;
+			cout << "Enter the new balance: ";
+			cin >> newBalance;
+			accountNode->balance = newBalance;
+			cout << "Balance updated successfully." << endl;
+			break;
+		}
+		case 5:
+			cout << "Exiting edit mode." << endl;
+			break;
+		default:
+			cout << "Invalid option, please try again." << endl;
+		}
+	}
+
+	// Update the server file with the new BST state
+	update_server(Root);
 }
 
 void BST_Tree::transfer(long long sender_accountno, long long receiver_accountno, long long sender_amount)
