@@ -113,7 +113,7 @@ void admin(BST_Tree& t, Hashtable& h) {
             h.displayPasswords();
             break;
         case 5:
-            cout << "Edit account functionality is not implemented yet." << endl;
+            t.editaccount_byAdmin();
             break;
         case 6:
             cout << "Exiting..." << endl;

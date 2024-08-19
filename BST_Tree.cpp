@@ -238,7 +238,7 @@ void BST_Tree::editaccount_byAdmin() {
 			}
 			else {
 				long long newPassword = stoll(newPasswordStr); // Convert the string to a long long
-				accountNode->password = newPasswordStr; // Store the string version
+				accountNode->password = newPassword; // Store the numeric version
 				cout << "Password updated successfully." << endl;
 			}
 			break;
