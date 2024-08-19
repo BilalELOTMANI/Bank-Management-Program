@@ -229,14 +229,16 @@ void BST_Tree::editaccount_byAdmin() {
 			break;
 		}
 		case 3: {
-			long long newPassword;
+			string newPasswordStr;
 			cout << "Enter the new password (4 digits): ";
-			cin >> newPassword;
-			if (newPassword.length() != 4) {
+			cin >> newPasswordStr;
+
+			if (newPasswordStr.length() != 4) {
 				cout << "Password must be 4 digits." << endl;
 			}
 			else {
-				accountNode->password = newPassword;
+				long long newPassword = stoll(newPasswordStr); // Convert the string to a long long
+				accountNode->password = newPasswordStr; // Store the string version
 				cout << "Password updated successfully." << endl;
 			}
 			break;
